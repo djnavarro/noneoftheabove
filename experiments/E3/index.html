@@ -1,0 +1,676 @@
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Adelaide Computational Cognitive Science</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+    
+    <!-- ####################### Heading ####################### -->
+	<a name="top"></a>
+	<h1 style="text-align:left" id="header" class="header">Adelaide Computational Cognitive Science</h1>
+
+
+    <!-- ####################### Start page ####################### -->
+
+	<div class="start">
+		<!-- Text box for the splash page -->
+		<div class="start" style="text-align:left; border:2px solid; padding:10px;  width:800px; font-size:120%">
+			<p>Thanks for accepting the HIT. <b>"Learning alien words"</b> is a short psychological study 
+                investigating how people learn new concepts on the basis of very limited information. It involves 
+                the following steps:</p>
+			<ol>
+				<li> We ask for demographic information (not connected to your Amazon ID)<br><br></li> 
+				<li> The study then explains the task. You will need to pass a short test to 
+                     check that you understand how the study works.<br><br></li> 
+				<li> Next comes the experiment itself.<br><br></li>
+				<li> At the end, we'll give you the completion code you need to get paid for the HIT.</li>
+			</ol>
+			<p>
+                The total time taken should be about 5 minutes. Please <u>don't</u> use the "back" button on 
+                your browser or close the window until you reach the end and receive your completion code. 
+                This is very likely to break the experiment and may make it difficult for you to get paid. 
+                However, if something does go wrong, please contact us! When you're ready to begin, click 
+                on the "start" button below.</p></div>
+		<br><br>
+
+		<!-- Next button for the splash page -->
+        <div style=" width:800px; font-size:120%">
+            <div style="float:right"> 
+                <input type="button" id="splashButton" class="start" value="Start!" 
+                       onclick="splashButtonClick()">
+            </div>
+        </div>
+	</div>
+
+	<!-- ####################### Demographics ####################### -->
+	
+	<div class="demographics" style="display:none">
+		<div class="demographics" style="text-align:left; border:2px solid; padding:10px;  width:800px; font-size:120%">
+			<!-- Explanatory text -->
+			<p>
+                We need this information for our records, but it is kept completely separate from 
+                information about your Amazon ID. As long as you finish the experiment you will get 
+                paid no matter what you put here, so please be honest.
+            </p><br>
+	
+			<!-- Gender -->
+	 		<label for="gender"><b>Gender: &nbsp;</b></label>
+	  		<input type="radio" name="gender" value="male" /> Male &nbsp; 
+	  		<input type="radio" name="gender" value="female" /> Female &nbsp;
+	  		<input type="radio" name="gender" value="other" /> Other<br /><br />
+
+			<!-- Age -->
+	  		<label for="age"><b>Age: &nbsp;</b></label><input id="age" name="age" /><br /><br />
+
+			<!-- Language -->
+	  		<label for="language"><b>Native Language(s): &nbsp;</b></label>
+            <input id="language" name="language" /><br /><br />
+
+			<!-- Country -->
+			<label for="country"><b>Country you live in: &nbsp;</b></label>  
+	  		<select name="country" id="country" class='drop-menu'>
+	    		<option>Afghanistan</option>
+                <option>&Aring;land Islands</option>
+                <option>Albania</option>
+                <option>Algeria</option>
+                <option>American Samoa</option>
+                <option>Andorra</option>
+                <option>Angola</option>
+                <option>Anguilla</option>
+                <option>Antarctica</option>
+                <option>Antigua and Barbuda</option>
+                <option>Argentina</option>
+                <option>Armenia</option>
+                <option>Aruba</option>
+                <option>Australia</option>
+                <option>Austria</option>
+                <option>Azerbaijan</option>
+                <option>Bahamas</option>
+                <option>Bahrain</option>
+                <option>Bangladesh</option>
+                <option>Barbados</option>
+                <option>Belarus</option>
+                <option>Belgium</option>
+                <option>Belize</option>
+                <option>Benin</option>
+                <option>Bermuda</option>
+                <option>Bhutan</option>
+                <option>Bolivia</option>
+                <option>Bosnia and Herzegovina</option>
+                <option>Botswana</option>
+                <option>Bouvet Island</option>
+                <option>Brazil</option>
+                <option>British Indian Ocean territory</option>
+                <option>Brunei Darussalam</option>
+                <option>Bulgaria</option>
+                <option>Burkina Faso</option>
+                <option>Burundi</option>
+                <option>Cambodia</option>
+                <option>Cameroon</option>
+                <option>Canada</option>
+                <option>Cape Verde</option>
+                <option>Cayman Islands</option>
+                <option>Central African Republic</option>
+                <option>Chad</option>
+                <option>Chile</option>
+                <option>China</option>
+                <option>Christmas Island</option>
+                <option>Cocos (Keeling) Islands</option>
+                <option>Colombia</option>
+                <option>Comoros</option>
+                <option>Congo</option>
+                <option>Congo, Democratic Republic</option>
+                <option>Cook Islands</option>
+                <option>Costa Rica</option>
+                <option>C&ocirc;te d'Ivoire (Ivory Coast)</option>
+                <option>Croatia (Hrvatska)</option>
+                <option>Cuba</option>
+                <option>Cyprus</option>
+                <option>Czech Republic</option>
+                <option>Denmark</option>
+                <option>Djibouti</option>
+                <option>Dominica</option>
+                <option>Dominican Republic</option>
+                <option>East Timor</option>
+                <option>Ecuador</option>
+                <option>Egypt</option>
+                <option>El Salvador</option>
+                <option>Equatorial Guinea</option>
+                <option>Eritrea</option>
+                <option>Estonia</option>
+                <option>Ethiopia</option>
+                <option>Falkland Islands</option>
+                <option>Faroe Islands</option>
+                <option>Fiji</option>
+                <option>Finland</option>
+                <option>France</option>
+                <option>French Guiana</option>
+                <option>French Polynesia</option>
+                <option>French Southern Territories</option>
+                <option>Gabon</option>
+                <option>Gambia</option>
+                <option>Georgia</option>
+                <option>Germany</option>
+                <option>Ghana</option>
+                <option>Gibraltar</option>
+                <option>Greece</option>
+                <option>Greenland</option>
+                <option>Grenada</option>
+                <option>Guadeloupe</option>
+                <option>Guam</option>
+                <option>Guatemala</option>
+                <option>Guinea</option>
+                <option>Guinea-Bissau</option>
+                <option>Guyana</option>
+                <option>Haiti</option>
+                <option>Heard and McDonald Islands</option>
+                <option>Honduras</option>
+                <option>Hong Kong</option>
+                <option>Hungary</option>
+                <option>Iceland</option>
+                <option>India</option>
+                <option>Indonesia</option>
+                <option>Iran</option>
+                <option>Iraq</option>
+                <option>Ireland</option>
+                <option>Israel</option>
+                <option>Italy</option>
+                <option>Jamaica</option>
+                <option>Japan</option>
+                <option>Jordan</option>
+                <option>Kazakhstan</option>
+                <option>Kenya</option>
+                <option>Kiribati</option>
+                <option>Korea (north)</option>
+                <option>Korea (south)</option>
+                <option>Kuwait</option>
+                <option>Kyrgyzstan</option>
+                <option>Lao People's Democratic Republic</option>
+                <option>Latvia</option>
+                <option>Lebanon</option>
+                <option>Lesotho</option>
+                <option>Liberia</option>
+                <option>Libyan Arab Jamahiriya</option>
+                <option>Liechtenstein</option>
+                <option>Lithuania</option>
+                <option>Luxembourg</option>
+                <option>Macao</option>
+                <option>Macedonia, Former Yugoslav Republic Of</option>
+                <option>Madagascar</option>
+                <option>Malawi</option>
+                <option>Malaysia</option>
+                <option>Maldives</option>
+                <option>Mali</option>
+                <option>Malta</option>
+                <option>Marshall Islands</option>
+                <option>Martinique</option>
+                <option>Mauritania</option>
+                <option>Mauritius</option>
+                <option>Mayotte</option>
+                <option>Mexico</option>
+                <option>Micronesia</option>
+                <option>Moldova</option>
+                <option>Monaco</option>
+                <option>Mongolia</option>
+                <option>Montenegro</option>
+                <option>Montserrat</option>
+                <option>Morocco</option>
+                <option>Mozambique</option>
+                <option>Myanmar</option>
+                <option>Namibia</option>
+                <option>Nauru</option>
+                <option>Nepal</option>
+                <option>Netherlands</option>
+                <option>Netherlands Antilles</option>
+                <option>New Caledonia</option>
+                <option>New Zealand</option>
+                <option>Nicaragua</option>
+                <option>Niger</option>
+                <option>Nigeria</option>
+                <option>Niue</option>
+                <option>Norfolk Island</option>
+                <option>Northern Mariana Islands</option>
+                <option>Norway</option>
+                <option>Oman</option>
+                <option>Pakistan</option>
+                <option>Palau</option>
+                <option>Palestinian Territories</option>
+                <option>Panama</option>
+                <option>Papua New Guinea</option>
+                <option>Paraguay</option>
+                <option>Peru</option>
+                <option>Philippines</option>
+                <option>Pitcairn</option>
+                <option>Poland</option>
+                <option>Portugal</option>
+                <option>Puerto Rico</option>
+                <option>Qatar</option>
+                <option>R&eacute;union</option>
+                <option>Romania</option>
+                <option>Russian Federation</option>
+                <option>Rwanda</option>
+                <option>Saint Helena</option>
+                <option>Saint Kitts and Nevis</option>
+                <option>Saint Lucia</option>
+                <option>Saint Pierre and Miquelon</option>
+                <option>Saint Vincent and the Grenadines</option>
+                <option>Samoa</option>
+                <option>San Marino</option>
+                <option>Sao Tome and Principe</option>
+                <option>Saudi Arabia</option>
+                <option>Senegal</option>
+                <option>Serbia</option>
+                <option>Seychelles</option>
+                <option>Sierra Leone</option>
+                <option>Singapore</option>
+                <option>Slovakia</option>
+                <option>Slovenia</option>
+                <option>Solomon Islands</option>
+                <option>Somalia</option>
+                <option>South Africa</option>
+                <option>South Georgia and the South Sandwich Islands</option>
+                <option>Spain</option>
+                <option>Sri Lanka</option>
+                <option>Sudan</option>
+                <option>Suriname</option>
+                <option>Svalbard and Jan Mayen Islands</option>
+                <option>Swaziland</option>
+                <option>Sweden</option>
+                <option>Switzerland</option>
+                <option>Syria</option>
+                <option>Taiwan</option>
+                <option>Tajikistan</option>
+                <option>Tanzania</option>
+                <option>Thailand</option>
+                <option>Togo</option>
+                <option>Tokelau</option>
+                <option>Tonga</option>
+                <option>Trinidad and Tobago</option>
+                <option>Tunisia</option>
+                <option>Turkey</option>
+                <option>Turkmenistan</option>
+                <option>Turks and Caicos Islands</option>
+                <option>Tuvalu</option>
+                <option>Uganda</option>
+                <option>Ukraine</option>
+                <option>United Arab Emirates</option>
+                <option>United Kingdom</option>
+                <option selected="selected">United States of America</option>
+                <option>Uruguay</option>
+                <option>Uzbekistan</option>
+                <option>Vanuatu</option>
+                <option>Vatican City</option>
+                <option>Venezuela</option>
+                <option>Vietnam</option>
+                <option>Virgin Islands (British)</option>
+                <option>Virgin Islands (US)</option>
+                <option>Wallis and Futuna Islands</option>
+                <option>Western Sahara</option>
+                <option>Yemen</option>
+                <option>Zaire</option>
+                <option>Zambia</option>
+                <option>Zimbabwe</option>
+	    	</select>
+		
+			<br>
+		</div>
+		<br>
+		
+		<!-- Demographics  button -->
+        <div style=" width:800px; font-size:120%">
+            <div style="float:right"> 
+                <input type="button" class="demographics" id="demographicsButton" value="Next >"
+                       onclick="demographicsButtonClick()">
+            </div>
+        </div>
+	</div>	
+
+    
+    <!-- ####################### Instructions ####################### -->
+
+	<!-- One div to cover the whole instruction set -->
+	<div class="instruction" style="display:none">
+        
+		<!-- Instruction 0 (initially hidden only by the big-div)-->
+		<div class="instruction0">
+		<div id="instruction0inner" class="innerbox" 
+             style="text-align:left; border:2px solid; padding:10px;  font-size: 120%; width:800px">
+			<p>This is a study looking at how people learn new words. During the task
+you'll be shown some simple pictures and asked to guess how each picture
+is labelled in an alien language.  To give you a feel for how the task
+works, we'll walk you through an example. 
+             <br><br>    
+                The first thing you might be shown is a pair of images like this:
+            <br><br>
+                <img src = "./img/screen1.png">
+            <br><br>
+                In this example, you know that the square on the left is called a "Kap", and
+                you're being asked to guess whether the triangle on the right is also
+                called a "Kap", or whether it has a different label (i.e., a "New" word). 
+            </p>    
+		</div><br></div>
+		
+        <!-- Instruction 1 (initially hidden by the big div and also itself hidden)-->
+		<div class="instruction1" style="display:none"> <a name="instruct1"></a>
+		<div id="instruction1inner" class="innerbox" 
+             style="text-align:left; border:2px solid; padding:10px; font-size: 120%; width:800px">
+            After you make your guess, you'll usually be given some feedback telling you 
+            the right answer:
+            <br><br>
+                <img src = "./img/screen2.png">
+            <br><br>
+            In this case, the triangle is called a "Bom." If you'd guessed that
+            it was a "Kap" you were wrong. If you'd guessed that it had a "New" label 
+            you were right.
+            </p>
+        </div><br></div>
+		
+        <!-- Instruction 2 (initially hidden by the big div and also itself hidden)-->
+		<div class="instruction2" style="display:none"> <a name="instruct2"></a>
+		<div id="instruction2inner" class="innerbox" 
+             style="text-align:left; border:2px solid; padding:10px; font-size: 120%; width:800px">
+            During each task you'll see a few different objects which will be revealed one at 
+            a time. Each time one is revealed you'll be asked to make a new guess. After two
+            guesses, your screen might look something like this:
+            <br><br>
+                &nbsp; &nbsp; <img src = "./img/screen5.png" style="width:500px; border: 1px dotted">
+            <br><br>
+            To make your guess you'd be given these options to choose between:
+                        <br><br>
+                &nbsp; &nbsp; <img src = "./img/screen6.png" style="width:500px; border: 1px dotted">
+            <br><br>
+            If you think that the pentagon is called a "Kap" then you'd click on the "Kap" button. If
+            you think it's a "Bom", you'd click on the "Bom" button. If you think that it's something else, 
+            click on the the "New" button.
+            </p>
+        </div><br></div>
+    
+        <!-- Instruction3 (initially hidden by the big div and also itself hidden)-->
+		<div class="instruction3" style="display:none"> <a name="instruct3"></a>
+		<div id="instruction3inner" class="innerbox" 
+             style="text-align:left; border:2px solid; padding:10px; font-size: 120%; width:800px">
+            Each task is very short, consisting of about 2-3 decisions on average. The study as a whole
+            consists of 12 of these tasks, and should only take a few minutes to complete. At the end
+            of the task you'll be given a completion code that you can use to get paid for the HIT.
+            <br><br>
+            Sounds easy?
+            </p>
+        </div><br></div>
+    
+		<!-- Instruction button (initially hidden only by the big div) -->
+        <div style="width:800px; font-size:120%">
+            <div style="float:right"> 
+		          <div class="instruction">
+                      <input type="button" id="instructionButton" value="Read More >" 
+                             onclick="instructionButtonClick()">
+                      <br><br>
+                  </div>
+            </div>    
+		</div>
+	</div>
+	
+	
+	
+	<!-- ####################### Instruction Checks ####################### -->
+
+	<div class="check" style="display:none">
+		<div style="text-align:left; border:2px solid; padding:10px; width:800px; font-size:  120%">
+			
+			<!-- Question 0 -->
+	  		<label for="question0">What am I supposed to do?</label><br>
+	  		<input type="radio" name="question0" class="checkRadio" value="correct" />
+                Guess what category each picture belongs to.<br />
+	  		<input type="radio" name="question0" class="checkRadio" value="incorrect" />
+                Click some random buttons until the task ends.<br /><br />
+	
+			<!-- Question 1 -->
+			<label for="question1">How often will new pictures always belong to the same category as old ones?</label><br>
+	  		<input type="radio" name="question1" class="checkRadio" value="correct" />
+                Sometimes. That's what the "New" button is there for.<br />
+	  		<input type="radio" name="question1" class="checkRadio" value="incorrect" />
+                Never. Every new picture belongs to the same category as an old one.<br />
+            <input type="radio" name="question1" class="checkRadio" value="incorrect" />
+                Always. Every new picture will belong to a completely new category.<br />
+			<br>
+	
+	  		<!-- Question 2 -->
+			<label for="question2">How many tasks do I have to do?</label><br>
+	  		<input type="radio" name="question2" class="checkRadio" value="incorrect" />3 very long tasks<br />
+	  		<input type="radio" name="question2" class="checkRadio" value="incorrect" />12 very long tasks<br />
+	  		<input type="radio" name="question2" class="checkRadio" value="correct" />12 very short tasks<br />
+		
+		</div>
+		<br><br>
+	
+		<!-- Submit instruction check answers button -->
+        <div style="width:800px; font-size:120%">
+            <div style="float:right">
+                <input type="button" id="checkButton" value="Submit Answers" 
+                       onclick="checkButtonClick()">
+            </div>
+        </div>
+	</div>
+	
+	<!-- ####################### Response to Instruction Check ####################### -->
+	
+	<div class="checkSuccess" style="display:none; font-size: 120%">
+		<div class="checkSuccess" style="text-align:left; border:2px solid; padding:10px;  width:800px">
+			<p>Well done! Click on the button below when you're ready to start the experiment</p>
+		</div>
+		<br><br>
+
+		<!-- Next button for the splash page -->	
+        <div style="width:800px">
+            <div style="float:right">
+		          <input type="button" id="checkSuccessButton" class="checkSuccess" 
+                         value="Start Experiment!" onclick="checkSuccessButtonClick()">
+            </div>
+        </div>
+	</div>	
+	
+	<div class="checkFail" style="display:none; font-size: 120%">
+		<div class="checkFail" style="text-align:left; border:2px solid; padding:10px;  width:800px">
+			<p>Sorry, at least one of your answers was incorrect. Please take another look at the 
+                instructions and try again.</p>
+		</div>
+		<br><br>
+
+		<!-- Next button for the splash page -->	
+        <div style="width:800px">
+            <div style="float:right">
+		          <input type="button" id="checkFailButton" class="checkFail" 
+                         value="< Back to the Instructions" onclick="checkFailButtonClick()">
+            </div>
+        </div>
+	</div>
+	
+    
+    
+    <!-- ####################### Experiment Splash Screen ####################### -->
+
+    <div id="splash" class="splash" style="display:none">
+        <br><br>
+        <input type="button" id="conditionButton" onclick="startCondition()" 
+               value="Start Task 1 of 12" style="width:300px; font-size:200%">
+    </div>
+	
+	<!-- ####################### Experiment Display ####################### -->
+
+    <div id="expt" style="width:750;display:none;float:left">
+        <div style="width:700px;height:50px;float:right"></div>
+        <div class="images" style="width:700px;height:200px;float:right">
+            
+            <div class="table">
+                
+                <!-- task 1 slots -->
+                <div class="table-row" id="task1slots">
+                    <div class="table-cell"><img id="task1slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task1slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task1slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task1slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task1slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                 <!-- task 2 slots -->
+                <div class="table-row" id="task2slots" style="display:none">
+                    <div class="table-cell"><img id="task2slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task2slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task2slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task2slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task2slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                                
+                <!-- task 3 slots -->
+                <div class="table-row" id="task3slots" style="display:none">
+                    <div class="table-cell"><img id="task3slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task3slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task3slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task3slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task3slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>                
+                
+                <!-- task 4 slots -->
+                <div class="table-row" id="task4slots" style="display:none">
+                    <div class="table-cell"><img id="task4slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task4slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task4slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task4slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task4slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                <!-- task 5 slots -->
+                <div class="table-row" id="task5slots" style="display:none">
+                    <div class="table-cell"><img id="task5slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task5slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task5slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task5slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task5slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                
+                <!-- task 6 slots -->
+                <div class="table-row" id="task6slots" style="display:none">
+                    <div class="table-cell"><img id="task6slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task6slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task6slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task6slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task6slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                <!-- task 7 slots -->
+                <div class="table-row" id="task7slots" style="display:none">
+                    <div class="table-cell"><img id="task7slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task7slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task7slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task7slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task7slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                <!-- task 8 slots -->
+                <div class="table-row" id="task8slots" style="display:none">
+                    <div class="table-cell"><img id="task8slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task8slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task8slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task8slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task8slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                <!-- task 9 slots -->
+                <div class="table-row" id="task9slots" style="display:none">
+                    <div class="table-cell"><img id="task9slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task9slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task9slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task9slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task9slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                <!-- task 10 slots -->
+                <div class="table-row" id="task10slots" style="display:none">
+                    <div class="table-cell"><img id="task10slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task10slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task10slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task10slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task10slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                <!-- task 11 slots -->
+                <div class="table-row" id="task11slots" style="display:none">
+                    <div class="table-cell"><img id="task11slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task11slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task11slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task11slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task11slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                <!-- task 12 slots -->
+                <div class="table-row" id="task12slots" style="display:none">
+                    <div class="table-cell"><img id="task12slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task12slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task12slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task12slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task12slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                <!-- labels -->
+                <div class="table-row">
+                    <div class="table-cell"><span id="label0" style="font-size:200%"></span></div>
+                    <div class="table-cell"><span id="label1" style="font-size:200%"></span></div>
+                    <div class="table-cell"><span id="label2" style="font-size:200%"></span></div>
+                    <div class="table-cell"><span id="label3" style="font-size:200%"></span></div>
+                    <div class="table-cell"><span id="label4" style="font-size:200%"></span></div>
+                </div>
+                <br><br>
+
+            </div>
+        </div>
+
+        <div class="responsebuttons" id="responsebuttons" style="width:700px;height:200px;float:left">
+            <div style="float:middle;border:1px solid">
+                <p style="font-size:200%">Which category does this belong to?</p>
+                <input type="button" id="button0" onclick="buttonPress(0)" value="New" style="width:100px; font-size:200%"> &nbsp;
+                <input type="button" id="button1" onclick="buttonPress(1)" value="New" style="display:none; width:100px; font-size:200%"> &nbsp;
+                <input type="button" id="button2" onclick="buttonPress(2)" value="New" style="display:none; width:100px; font-size:200%"> &nbsp;
+                <input type="button" id="button3" onclick="buttonPress(3)" value="New" style="display:none; width:100px; font-size:200%"> &nbsp;
+                <input type="button" id="button4" onclick="buttonPress(4)" value="New" style="display:none; width:100px; font-size:200%">
+                <br><br>
+            </div>
+        </div>
+    </div>
+    
+    <input id="dummy" type="button", style="display:none">
+
+    
+    
+    <!-- ####################### wrap up ####################### -->
+	
+	<div id="end" class="end" style="display:none">
+		<div class="end" style="text-align:left; border:2px solid; padding:10px; font-size:120%; width:800px">
+			<p>Your completion code is 
+                <span id="turkcode" style="font-weight:bold;font-size:130%">0192</span>. 
+                To receive payment for the HIT, return to the Amazon Mechanical Turk page and enter 
+                this code. Please contact us if something goes wrong and we'll fix it as quickly as 
+                possible.
+                <br><br>
+                (Also... if you want to know what this was all about, click 
+                <a href="./wtf/index.html" target="_blank">here</a>
+                after copying your completion code)
+            </p>
+		</div>
+	</div>
+    
+	<!-- ####################### Scripts ####################### -->
+	
+
+	<!-- Script to define the experiment and run it -->
+    <script src="./js/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="./js/experiment.js" type="text/javascript"></script>
+    
+
+</body>
+</html>

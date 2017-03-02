@@ -1,0 +1,1012 @@
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>UNSW Computational Cognitive Science</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+    
+    <!-- ####################### Heading ####################### -->
+	<a name="top"></a>
+	<h1 style="text-align:left" id="header" class="header">UNSW Computational Cognitive Science</h1>
+
+
+    <!-- ####################### Start page ####################### -->
+
+	<div class="start">
+		<!-- Text box for the splash page -->
+		<div class="start" style="text-align:left; border:2px solid; padding:10px;  width:800px; font-size:120%">
+			<p>Thanks for accepting the HIT. <b>"Learning alien words"</b> is a short psychological study 
+                investigating how people learn new concepts on the basis of very limited information. It involves 
+                the following steps:</p>
+			<ol>
+				<li> Because this is a University research project, we ask for your informed consent. (The format of the consent form is a  standard university document, so it sometimes looks a little weird on MTurk)<br><br></li>
+				<li> We then ask for demographic information (not connected to your Amazon ID)<br><br></li>
+				<li> The study then explains how to do the task in detail. You will need to pass a short test to 
+                     check that you understand how the study works.<br><br></li> 
+				<li> Next comes the experiment itself.<br><br></li>
+				<li> At the end, we'll give you the completion code you need to get paid for the HIT.</li>
+			</ol>
+			<p>
+                The total time taken should be about 10 minutes. Please <u>don't</u> use the "back" button on 
+                your browser or close the window until you reach the end and receive your completion code. 
+                This is very likely to break the experiment and may make it difficult for you to get paid. 
+                However, if something does go wrong, please contact us! When you're ready to begin, click 
+                on the "start" button below.</p></div>
+		<br><br>
+
+		<!-- Next button for the splash page -->
+        <div style=" width:800px; font-size:120%">
+            <div style="float:right"> 
+                <input type="button" id="splashButton" class="start" value="Start!" 
+                       onclick="splashButtonClick()">
+            </div>
+        </div>
+	</div>
+    
+    
+	<!-- ####################### Consent ####################### -->
+	<div class="consent" style="display:none">
+		<!-- Text box for the splash page -->
+		<div class="consent" style="text-align:left; border:2px solid; padding:10px;  width:800px; font-size:120%">
+			
+			<p align="right">Approval No 2574</p>
+
+
+			<p align="center"><b>THE UNIVERSITY OF NEW SOUTH WALES<br>
+			PARTICIPANT INFORMATION STATEMENT</b><br><br>
+			Theories of inductive reasoning
+			</p>
+
+			<p><b>Participant Selection and Purpose of Study</b></p>
+			<p>You are invited to participate in a study of how human reasoning works.  We hope to learn what information people find most useful in guiding their judgments about the world. You were selected as a possible participant in this study because you accepted our HIT on Amazon Mechanical Turk.</p>
+
+			<p><b>Description of Study and Risks</b></p>
+			<p>If you decide to participate, we will present you with some reasoning problems in which you need to use the (possibly incomplete) information to make judgements (or guesses) about the truth of different propositions. Detailed instructions will be provided once the task begins. The exact number of problems you need to solve depends on which version of the task the computer assigns you to, but the on-screen display will inform you of how much further you have to go. The task should take approximately 10 minutes to complete including reading time.</p>
+
+			<p>No discomforts or inconveniences besides some boredom are reasonably expected. No risks are reasonably expected as a result of your participation in this study. We cannot and do not guarantee or promise that you will receive any benefits from this study.</p>
+
+			<p><b>Confidentiality and Disclosure of Information</b></p>
+			<p>Any information that is obtained in connection with this study and that can be identified with you will remain confidential and will be disclosed only with your permission or except as required by law.  If you give us your permission by clicking on the “I agree” button below, we plan to publish the results in academic journals and discuss the results at scientific conferences. In any publication, information will be provided in such a way that you cannot be identified.</p>
+
+			<p><b>Recompense to participants</b></p>
+			<p>As stated on the Amazon Mechanical Turk page, the pay for completing this HIT is <b>US$1.70.</b></p>
+
+			<p><b>Your consent</b></p>
+			<p>Your decision whether or not to participate will not prejudice your future relations with The University of New South Wales.  If you decide to participate, you are free to withdraw your consent and to discontinue participation at any time without prejudice.</p>
+
+			<p><b>Inquiries</b></p>
+			<p>If you have any questions or concerns following your participation, Associate Professor Daniel Navarro (+61 4 2148 8402, email. dan.navarro@unsw.edu.au) will be happy to address them. Complaints about the study may be directed to UNSW’s Research Ethics and Compliance Support, (phone +61 2 9385 4235 or +61 2 9385 4958, email. humanethics@unsw.edu.au).<p> 
+
+			<p>Please keep a copy of this information sheet (you can download the pdf <a href="./wtf/info.pdf" target="_blank">here</a>)</p>
+
+			<br>
+			<p align="center"><b>PARTICIPANT CONSENT</b></p>
+
+			By continuing, you are making a decision whether or not to participate.  Clicking the button below indicates that, having read the information provided on the participant information sheet, you have decided to participate. 
+
+			<br>
+			<p align="center">
+                <input type="button" id="consentButton" class="consent" value="I agree" onclick="consentButtonClick()">
+			</p>
+			
+
+			<p>To withdraw your consent, simply close the browser tab and return the HIT. Your data will be deleted from our records.</p>
+		</div>
+	</div>
+
+	<!-- ####################### Demographics ####################### -->
+	
+	<div class="demographics" style="display:none">
+		<div class="demographics" style="text-align:left; border:2px solid; padding:10px;  width:800px; font-size:120%">
+			<!-- Explanatory text -->
+			<p>
+                We need this information for our records, but it is kept completely separate from 
+                information about your Amazon ID. As long as you finish the experiment you will get 
+                paid no matter what you put here, so please be honest.
+            </p><br>
+	
+			<!-- Gender -->
+	 		<label for="gender"><b>Gender: &nbsp;</b></label>
+	  		<input type="radio" name="gender" value="male" /> Male &nbsp; 
+	  		<input type="radio" name="gender" value="female" /> Female &nbsp;
+	  		<input type="radio" name="gender" value="other" /> Other<br /><br />
+
+			<!-- Age -->
+	  		<label for="age"><b>Age: &nbsp;</b></label><input id="age" name="age" /><br /><br />
+
+			<!-- Language -->
+	  		<label for="language"><b>Native Language(s): &nbsp;</b></label>
+            <input id="language" name="language" /><br /><br />
+
+			<!-- Country -->
+			<label for="country"><b>Country you live in: &nbsp;</b></label>  
+	  		<select name="country" id="country" class='drop-menu'>
+	    		<option>Afghanistan</option>
+                <option>&Aring;land Islands</option>
+                <option>Albania</option>
+                <option>Algeria</option>
+                <option>American Samoa</option>
+                <option>Andorra</option>
+                <option>Angola</option>
+                <option>Anguilla</option>
+                <option>Antarctica</option>
+                <option>Antigua and Barbuda</option>
+                <option>Argentina</option>
+                <option>Armenia</option>
+                <option>Aruba</option>
+                <option>Australia</option>
+                <option>Austria</option>
+                <option>Azerbaijan</option>
+                <option>Bahamas</option>
+                <option>Bahrain</option>
+                <option>Bangladesh</option>
+                <option>Barbados</option>
+                <option>Belarus</option>
+                <option>Belgium</option>
+                <option>Belize</option>
+                <option>Benin</option>
+                <option>Bermuda</option>
+                <option>Bhutan</option>
+                <option>Bolivia</option>
+                <option>Bosnia and Herzegovina</option>
+                <option>Botswana</option>
+                <option>Bouvet Island</option>
+                <option>Brazil</option>
+                <option>British Indian Ocean territory</option>
+                <option>Brunei Darussalam</option>
+                <option>Bulgaria</option>
+                <option>Burkina Faso</option>
+                <option>Burundi</option>
+                <option>Cambodia</option>
+                <option>Cameroon</option>
+                <option>Canada</option>
+                <option>Cape Verde</option>
+                <option>Cayman Islands</option>
+                <option>Central African Republic</option>
+                <option>Chad</option>
+                <option>Chile</option>
+                <option>China</option>
+                <option>Christmas Island</option>
+                <option>Cocos (Keeling) Islands</option>
+                <option>Colombia</option>
+                <option>Comoros</option>
+                <option>Congo</option>
+                <option>Congo, Democratic Republic</option>
+                <option>Cook Islands</option>
+                <option>Costa Rica</option>
+                <option>C&ocirc;te d'Ivoire (Ivory Coast)</option>
+                <option>Croatia (Hrvatska)</option>
+                <option>Cuba</option>
+                <option>Cyprus</option>
+                <option>Czech Republic</option>
+                <option>Denmark</option>
+                <option>Djibouti</option>
+                <option>Dominica</option>
+                <option>Dominican Republic</option>
+                <option>East Timor</option>
+                <option>Ecuador</option>
+                <option>Egypt</option>
+                <option>El Salvador</option>
+                <option>Equatorial Guinea</option>
+                <option>Eritrea</option>
+                <option>Estonia</option>
+                <option>Ethiopia</option>
+                <option>Falkland Islands</option>
+                <option>Faroe Islands</option>
+                <option>Fiji</option>
+                <option>Finland</option>
+                <option>France</option>
+                <option>French Guiana</option>
+                <option>French Polynesia</option>
+                <option>French Southern Territories</option>
+                <option>Gabon</option>
+                <option>Gambia</option>
+                <option>Georgia</option>
+                <option>Germany</option>
+                <option>Ghana</option>
+                <option>Gibraltar</option>
+                <option>Greece</option>
+                <option>Greenland</option>
+                <option>Grenada</option>
+                <option>Guadeloupe</option>
+                <option>Guam</option>
+                <option>Guatemala</option>
+                <option>Guinea</option>
+                <option>Guinea-Bissau</option>
+                <option>Guyana</option>
+                <option>Haiti</option>
+                <option>Heard and McDonald Islands</option>
+                <option>Honduras</option>
+                <option>Hong Kong</option>
+                <option>Hungary</option>
+                <option>Iceland</option>
+                <option>India</option>
+                <option>Indonesia</option>
+                <option>Iran</option>
+                <option>Iraq</option>
+                <option>Ireland</option>
+                <option>Israel</option>
+                <option>Italy</option>
+                <option>Jamaica</option>
+                <option>Japan</option>
+                <option>Jordan</option>
+                <option>Kazakhstan</option>
+                <option>Kenya</option>
+                <option>Kiribati</option>
+                <option>Korea (north)</option>
+                <option>Korea (south)</option>
+                <option>Kuwait</option>
+                <option>Kyrgyzstan</option>
+                <option>Lao People's Democratic Republic</option>
+                <option>Latvia</option>
+                <option>Lebanon</option>
+                <option>Lesotho</option>
+                <option>Liberia</option>
+                <option>Libyan Arab Jamahiriya</option>
+                <option>Liechtenstein</option>
+                <option>Lithuania</option>
+                <option>Luxembourg</option>
+                <option>Macao</option>
+                <option>Macedonia, Former Yugoslav Republic Of</option>
+                <option>Madagascar</option>
+                <option>Malawi</option>
+                <option>Malaysia</option>
+                <option>Maldives</option>
+                <option>Mali</option>
+                <option>Malta</option>
+                <option>Marshall Islands</option>
+                <option>Martinique</option>
+                <option>Mauritania</option>
+                <option>Mauritius</option>
+                <option>Mayotte</option>
+                <option>Mexico</option>
+                <option>Micronesia</option>
+                <option>Moldova</option>
+                <option>Monaco</option>
+                <option>Mongolia</option>
+                <option>Montenegro</option>
+                <option>Montserrat</option>
+                <option>Morocco</option>
+                <option>Mozambique</option>
+                <option>Myanmar</option>
+                <option>Namibia</option>
+                <option>Nauru</option>
+                <option>Nepal</option>
+                <option>Netherlands</option>
+                <option>Netherlands Antilles</option>
+                <option>New Caledonia</option>
+                <option>New Zealand</option>
+                <option>Nicaragua</option>
+                <option>Niger</option>
+                <option>Nigeria</option>
+                <option>Niue</option>
+                <option>Norfolk Island</option>
+                <option>Northern Mariana Islands</option>
+                <option>Norway</option>
+                <option>Oman</option>
+                <option>Pakistan</option>
+                <option>Palau</option>
+                <option>Palestinian Territories</option>
+                <option>Panama</option>
+                <option>Papua New Guinea</option>
+                <option>Paraguay</option>
+                <option>Peru</option>
+                <option>Philippines</option>
+                <option>Pitcairn</option>
+                <option>Poland</option>
+                <option>Portugal</option>
+                <option>Puerto Rico</option>
+                <option>Qatar</option>
+                <option>R&eacute;union</option>
+                <option>Romania</option>
+                <option>Russian Federation</option>
+                <option>Rwanda</option>
+                <option>Saint Helena</option>
+                <option>Saint Kitts and Nevis</option>
+                <option>Saint Lucia</option>
+                <option>Saint Pierre and Miquelon</option>
+                <option>Saint Vincent and the Grenadines</option>
+                <option>Samoa</option>
+                <option>San Marino</option>
+                <option>Sao Tome and Principe</option>
+                <option>Saudi Arabia</option>
+                <option>Senegal</option>
+                <option>Serbia</option>
+                <option>Seychelles</option>
+                <option>Sierra Leone</option>
+                <option>Singapore</option>
+                <option>Slovakia</option>
+                <option>Slovenia</option>
+                <option>Solomon Islands</option>
+                <option>Somalia</option>
+                <option>South Africa</option>
+                <option>South Georgia and the South Sandwich Islands</option>
+                <option>Spain</option>
+                <option>Sri Lanka</option>
+                <option>Sudan</option>
+                <option>Suriname</option>
+                <option>Svalbard and Jan Mayen Islands</option>
+                <option>Swaziland</option>
+                <option>Sweden</option>
+                <option>Switzerland</option>
+                <option>Syria</option>
+                <option>Taiwan</option>
+                <option>Tajikistan</option>
+                <option>Tanzania</option>
+                <option>Thailand</option>
+                <option>Togo</option>
+                <option>Tokelau</option>
+                <option>Tonga</option>
+                <option>Trinidad and Tobago</option>
+                <option>Tunisia</option>
+                <option>Turkey</option>
+                <option>Turkmenistan</option>
+                <option>Turks and Caicos Islands</option>
+                <option>Tuvalu</option>
+                <option>Uganda</option>
+                <option>Ukraine</option>
+                <option>United Arab Emirates</option>
+                <option>United Kingdom</option>
+                <option selected="selected">United States of America</option>
+                <option>Uruguay</option>
+                <option>Uzbekistan</option>
+                <option>Vanuatu</option>
+                <option>Vatican City</option>
+                <option>Venezuela</option>
+                <option>Vietnam</option>
+                <option>Virgin Islands (British)</option>
+                <option>Virgin Islands (US)</option>
+                <option>Wallis and Futuna Islands</option>
+                <option>Western Sahara</option>
+                <option>Yemen</option>
+                <option>Zaire</option>
+                <option>Zambia</option>
+                <option>Zimbabwe</option>
+	    	</select>
+		
+			<br>
+		</div>
+		<br>
+		
+		<!-- Demographics  button -->
+        <div style=" width:800px; font-size:120%">
+            <div style="float:right"> 
+                <input type="button" class="demographics" id="demographicsButton" value="Next >"
+                       onclick="demographicsButtonClick()">
+            </div>
+        </div>
+	</div>	
+
+    
+    <!-- ####################### Instructions ####################### -->
+
+	<!-- One div to cover the whole instruction set -->
+	<div class="instruction" style="display:none">
+        
+		<!-- Instruction 0 (initially hidden only by the big-div)-->
+		<div class="instruction0">
+		<div id="instruction0inner" class="innerbox" 
+             style="text-align:left; border:2px solid; padding:10px;  font-size: 120%; width:800px">
+			<p>This is a study looking at how people learn new words. During the task
+you'll be shown some simple pictures and asked to guess how each picture
+is labelled in an alien language.  To give you a feel for how the task
+works, we'll walk you through an example. 
+             <br><br>    
+                The first thing that you might see in the task is a pair of objects displayed like this:
+            <br><br>
+                <img src = "./img/screen1.png" width="400px">
+            <br><br>
+                In this example, you know that the small triangle on the left is called a "Kap", and
+                you're being asked to guess whether the larger triangle on the right is also
+                called a "Kap", or whether it has a different label (i.e., a "New" word). 
+            </p>    
+		</div><br></div>
+		
+        <!-- Instruction 1 (initially hidden by the big div and also itself hidden)-->
+		<div class="instruction1" style="display:none"> <a name="instruct1"></a>
+		<div id="instruction1inner" class="innerbox" 
+             style="text-align:left; border:2px solid; padding:10px; font-size: 120%; width:800px">
+            <p>After you make your guess, the page will go blank very briefly before moving onto 
+            the next question. You won't get any feedback about whether your guess was
+            "right" or "wrong", because there are no objectively correct answers to these questions.
+            What we want to investigate are your intuitions and opinions!
+            </p>
+        </div><br></div>
+		
+        <!-- Instruction 2 (initially hidden by the big div and also itself hidden)-->
+		<div class="instruction2" style="display:none"> <a name="instruct2"></a>
+		<div id="instruction2inner" class="innerbox" 
+             style="text-align:left; border:2px solid; padding:10px; font-size: 120%; width:800px">
+            There's one additional detail to this task. In real life, we often learn
+about things we have never actually observed (e.g., you might know that
+Vienna is a real city even if you have never been there and don't know
+much about it). This task incorporates that idea, and so you'll also be
+asked questions that look more like this
+            <br><br>
+                <img src = "./img/screen2.png" width="400px">
+            <br><br>
+            In this example, you know about two Kaps and one Bom (and you can safely
+assume that they really do exist!) but you've only seen one of these
+objects yourself. As with the first example, your task is to guess
+whether the new item - the larger triangle - is a Kap, a Bom, or belongs to a
+new category.
+            </p>
+        </div><br></div>
+    
+        <!-- Instruction3 (initially hidden by the big div and also itself hidden)-->
+		<div class="instruction3" style="display:none"> <a name="instruct3"></a>
+		<div id="instruction3inner" class="innerbox" 
+             style="text-align:left; border:2px solid; padding:10px; font-size: 120%; width:800px">
+            The study as a whole
+            consists of 22 questions like this, and should only take a few minutes to complete. At the end
+            of the task you'll be given a completion code that you can use to get paid for the HIT.
+            <br><br>
+            Sounds easy?
+            </p>
+        </div><br></div>
+    
+		<!-- Instruction button (initially hidden only by the big div) -->
+        <div style="width:800px; font-size:120%">
+            <div style="float:right"> 
+		          <div class="instruction">
+                      <input type="button" id="instructionButton" value="Read More >" 
+                             onclick="instructionButtonClick()">
+                      <br><br>
+                  </div>
+            </div>    
+		</div>
+	</div>
+	
+	
+	
+	<!-- ####################### Instruction Checks ####################### -->
+
+	<div class="check" style="display:none">
+		<div style="text-align:left; border:2px solid; padding:10px; width:800px; font-size:  120%">
+			
+			<!-- Question 0 -->
+	  		<label for="question0">What am I supposed to do?</label><br>
+	  		<input type="radio" name="question0" class="checkRadio" value="correct" />
+                Guess what category each picture belongs to<br />
+	  		<input type="radio" name="question0" class="checkRadio" value="incorrect" />
+                Click some random buttons until the task ends<br /><br />
+	
+			<!-- Question 1 -->
+			<label for="question1">How often will new objects belong to a different category to any of the previous ones?</label><br>
+	  		<input type="radio" name="question1" class="checkRadio" value="correct" />
+                Sometimes. That's what the "New" button is there for<br />
+	  		<input type="radio" name="question1" class="checkRadio" value="incorrect" />
+                Never. Every new picture belongs to the same category as an old one<br />
+            <input type="radio" name="question1" class="checkRadio" value="incorrect" />
+                Always. Every new picture will belong to a completely new category<br />
+			<br>
+	
+	  		<!-- Question 2 -->
+			<label for="question2">What does it mean when the picture is a grey rectangle with a question mark in it?</label><br>
+	  		<input type="radio" name="question2" class="checkRadio" value="incorrect" />The object might be a grey rectangle but you're not sure<br />
+	  		<input type="radio" name="question2" class="checkRadio" value="incorrect" />You know that you've seen a grey rectangle but you're not sure what it is called<br />
+	  		<input type="radio" name="question2" class="checkRadio" value="correct" />You know the name of this object, but you aren't sure what it looks like<br />
+		
+		</div>
+		<br><br>
+	
+		<!-- Submit instruction check answers button -->
+        <div style="width:800px; font-size:120%">
+            <div style="float:right">
+                <input type="button" id="checkButton" value="Submit Answers" 
+                       onclick="checkButtonClick()">
+            </div>
+        </div>
+	</div>
+	
+	<!-- ####################### Response to Instruction Check ####################### -->
+	
+	<div class="checkSuccess" style="display:none; font-size: 120%">
+		<div class="checkSuccess" style="text-align:left; border:2px solid; padding:10px;  width:800px">
+			<p>Well done! Click on the button below when you're ready to start the experiment</p>
+		</div>
+		<br><br>
+
+		<!-- Next button for the splash page -->	
+        <div style="width:800px">
+            <div style="float:right">
+		          <input type="button" id="checkSuccessButton" class="checkSuccess" 
+                         value="Start Experiment!" onclick="checkSuccessButtonClick()">
+            </div>
+        </div>
+	</div>	
+	
+	<div class="checkFail" style="display:none; font-size: 120%">
+		<div class="checkFail" style="text-align:left; border:2px solid; padding:10px;  width:800px">
+			<p>Sorry, at least one of your answers was incorrect. Please take another look at the 
+                instructions and try again.</p>
+		</div>
+		<br><br>
+
+		<!-- Next button for the splash page -->	
+        <div style="width:800px">
+            <div style="float:right">
+		          <input type="button" id="checkFailButton" class="checkFail" 
+                         value="< Back to the Instructions" onclick="checkFailButtonClick()">
+            </div>
+        </div>
+	</div>
+	
+    
+    
+    <!-- ####################### Experiment Splash Screen ####################### -->
+
+    <div id="splash" class="splash" style="display:none">
+        <br><br>
+        <input type="button" id="conditionButton" onclick="startCondition()" 
+               value="Start Task" style="width:300px; font-size:200%">
+    </div>
+	
+	<!-- ####################### Experiment Display ####################### -->
+
+    <div id="expt" style="width:750;display:none;float:left">
+        <div style="width:700px;height:50px;float:right"></div>
+        <p></p><span id="countertext" style="font-size:150%">BLAH</span><br><br><br></p>
+        <div class="images" style="width:700px;height:250px;float:right; border-spacing:20px">
+            
+            
+            
+            <div class="table">
+                
+                <!-- task 1 slots -->
+                <div class="table-row" id="task1slots">
+                    <div class="table-cell"><img id="task1slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task1slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task1slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task1slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task1slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task1slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task1slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                 <!-- task 2 slots -->
+                <div class="table-row" id="task2slots" style="display:none">
+                    <div class="table-cell"><img id="task2slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task2slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task2slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task2slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task2slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task2slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task2slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                                
+                <!-- task 3 slots -->
+                <div class="table-row" id="task3slots" style="display:none">
+                    <div class="table-cell"><img id="task3slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task3slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task3slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task3slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task3slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task3slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task3slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+ </div>                
+                
+                <!-- task 4 slots -->
+                <div class="table-row" id="task4slots" style="display:none">
+                    <div class="table-cell"><img id="task4slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task4slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task4slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task4slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task4slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                <div class="table-cell"><img id="task4slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task4slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                <!-- task 5 slots -->
+                <div class="table-row" id="task5slots" style="display:none">
+                    <div class="table-cell"><img id="task5slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task5slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task5slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task5slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task5slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task5slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task5slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                
+                <!-- task 6 slots -->
+                <div class="table-row" id="task6slots" style="display:none">
+                    <div class="table-cell"><img id="task6slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task6slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task6slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task6slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task6slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task6slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task6slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                <!-- task 7 slots -->
+                <div class="table-row" id="task7slots" style="display:none">
+                    <div class="table-cell"><img id="task7slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task7slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task7slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task7slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task7slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task7slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task7slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                <!-- task 8 slots -->
+                <div class="table-row" id="task8slots" style="display:none">
+                    <div class="table-cell"><img id="task8slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task8slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task8slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task8slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task8slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task8slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task8slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                <!-- task 9 slots -->
+                <div class="table-row" id="task9slots" style="display:none">
+                    <div class="table-cell"><img id="task9slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task9slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task9slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task9slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task9slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task9slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task9slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                <!-- task 10 slots -->
+                <div class="table-row" id="task10slots" style="display:none">
+                    <div class="table-cell"><img id="task10slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task10slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task10slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task10slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task10slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task10slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task10slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                <!-- task 11 slots -->
+                <div class="table-row" id="task11slots" style="display:none">
+                    <div class="table-cell"><img id="task11slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task11slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task11slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task11slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task11slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task11slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task11slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                <!-- task 12 slots -->
+                <div class="table-row" id="task12slots" style="display:none">
+                    <div class="table-cell"><img id="task12slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task12slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task12slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task12slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task12slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task12slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task12slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                                <!-- task 13 slots -->
+                <div class="table-row" id="task13slots" style="display:none">
+                    <div class="table-cell"><img id="task13slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task13slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task13slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task13slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task13slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task13slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task13slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                                <!-- task 14 slots -->
+                <div class="table-row" id="task14slots" style="display:none">
+                    <div class="table-cell"><img id="task14slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task14slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task14slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task14slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task14slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task14slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task14slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                                <!-- task 15 slots -->
+                <div class="table-row" id="task15slots" style="display:none">
+                    <div class="table-cell"><img id="task15slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task15slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task15slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task15slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task15slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task15slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task15slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                                <!-- task 16 slots -->
+                <div class="table-row" id="task16slots" style="display:none">
+                    <div class="table-cell"><img id="task16slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task16slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task16slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task16slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task16slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task16slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task16slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                                <!-- task 17 slots -->
+                <div class="table-row" id="task17slots" style="display:none">
+                    <div class="table-cell"><img id="task17slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task17slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task17slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task17slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task17slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task17slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task17slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                                <!-- task 18 slots -->
+                <div class="table-row" id="task18slots" style="display:none">
+                    <div class="table-cell"><img id="task18slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task18slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task18slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task18slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task18slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task18slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task18slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                                <!-- task 19 slots -->
+                <div class="table-row" id="task19slots" style="display:none">
+                    <div class="table-cell"><img id="task19slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task19slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task19slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task19slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task19slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task19slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task19slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                                <!-- task 20 slots -->
+                <div class="table-row" id="task20slots" style="display:none">
+                    <div class="table-cell"><img id="task20slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task20slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task20slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task20slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task20slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task20slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task20slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                                <!-- task 21 slots -->
+                <div class="table-row" id="task21slots" style="display:none">
+                    <div class="table-cell"><img id="task21slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task21slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task21slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task21slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task21slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task21slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task21slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                                <!-- task 22 slots -->
+                <div class="table-row" id="task22slots" style="display:none">
+                    <div class="table-cell"><img id="task22slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task22slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task22slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task22slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task22slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task22slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task22slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+                                                <!-- task 22 slots -->
+                <div class="table-row" id="task23slots" style="display:none">
+                    <div class="table-cell"><img id="task23slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task23slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task23slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task23slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task23slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task23slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task23slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                                                <!-- task 24 slots -->
+                <div class="table-row" id="task24slots" style="display:none">
+                    <div class="table-cell"><img id="task24slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task24slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task24slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task24slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task24slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task24slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task24slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                                                <!-- task 25 slots -->
+                <div class="table-row" id="task25slots" style="display:none">
+                    <div class="table-cell"><img id="task25slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task25slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task25slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task25slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task25slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task25slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task25slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                                                <!-- task 26 slots -->
+                <div class="table-row" id="task26slots" style="display:none">
+                    <div class="table-cell"><img id="task26slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task26slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task26slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task26slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task26slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task26slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task26slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                                                <!-- task 27 slots -->
+                <div class="table-row" id="task27slots" style="display:none">
+                    <div class="table-cell"><img id="task27slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task27slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task27slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task27slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task27slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task27slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task27slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                                                <!-- task 28 slots -->
+                <div class="table-row" id="task28slots" style="display:none">
+                    <div class="table-cell"><img id="task28slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task28slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task28slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task28slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task28slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task28slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task28slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                                                <!-- task 29 slots -->
+                <div class="table-row" id="task29slots" style="display:none">
+                    <div class="table-cell"><img id="task29slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task29slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task29slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task29slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task29slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task29slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task29slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                                               <!-- task 30 slots -->
+                <div class="table-row" id="task30slots" style="display:none">
+                    <div class="table-cell"><img id="task30slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task30slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task30slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task30slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task30slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task30slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task30slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                                                <!-- task 31 slots -->
+                <div class="table-row" id="task31slots" style="display:none">
+                    <div class="table-cell"><img id="task31slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task31slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task31slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task31slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task31slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task31slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task31slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                      
+                                                                <!-- task 32 slots -->
+                <div class="table-row" id="task32slots" style="display:none">
+                    <div class="table-cell"><img id="task32slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task32slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task32slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task32slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task32slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task32slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task32slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                                                                <!-- task 33 slots -->
+                <div class="table-row" id="task33slots" style="display:none">
+                    <div class="table-cell"><img id="task33slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task33slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task33slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task33slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task33slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task33slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task33slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                                                                <!-- task 34 slots -->
+                <div class="table-row" id="task34slots" style="display:none">
+                    <div class="table-cell"><img id="task34slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task34slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task34slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task34slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task34slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task34slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task34slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                                                                <!-- task 35 slots -->
+                <div class="table-row" id="task35slots" style="display:none">
+                    <div class="table-cell"><img id="task35slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task35slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task35slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task35slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task35slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task35slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task35slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                                                                <!-- task 36 slots -->
+                <div class="table-row" id="task36slots" style="display:none">
+                    <div class="table-cell"><img id="task36slot0" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task36slot1" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task36slot2" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task36slot3" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task36slot4" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task36slot5" src="img/stim0.png" width="120px" style="display:none"></div>
+                    <div class="table-cell"><img id="task36slot6" src="img/stim0.png" width="120px" style="display:none"></div>
+                </div>
+                
+
+                
+                
+                <!-- labels -->
+                <div class="table-row">
+                    <div class="table-cell"><span id="label0" style="font-size:200%"></span></div>
+                    <div class="table-cell"><span id="label1" style="font-size:200%"></span></div>
+                    <div class="table-cell"><span id="label2" style="font-size:200%"></span></div>
+                    <div class="table-cell"><span id="label3" style="font-size:200%"></span></div>
+                    <div class="table-cell"><span id="label4" style="font-size:200%"></span></div>                                      
+                    <div class="table-cell"><span id="label5" style="font-size:200%"></span></div>                                      
+                    <div class="table-cell"><span id="label6" style="font-size:200%"></span></div>
+                </div>
+                <br><br>
+
+            </div>
+        </div>
+
+        
+        <div class="responsebuttons" id="responsebuttons" style="width:700px;height:200px;float:right">
+            <div class="responsebuttons" style="float:middle;border:1px solid">
+                <p></p>
+                <p class="responsebuttons" style="font-size:200%">Which category does this belong to?</p>
+                <input type="button" id="button0" onclick="buttonPress(0)" value="New" style="width:100px; font-size:200%"> &nbsp;
+                <input type="button" id="button1" onclick="buttonPress(1)" value="New" style="display:none; width:100px; font-size:200%"> &nbsp;
+                <input type="button" id="button2" onclick="buttonPress(2)" value="New" style="display:none; width:100px; font-size:200%"> &nbsp;
+                <input type="button" id="button3" onclick="buttonPress(3)" value="New" style="display:none; width:100px; font-size:200%"> &nbsp;
+                <input type="button" id="button4" onclick="buttonPress(4)" value="New" style="display:none; width:100px; font-size:200%">
+                <input type="button" id="button5" onclick="buttonPress(5)" value="New" style="display:none; width:100px; font-size:200%">
+                <input type="button" id="button6" onclick="buttonPress(6)" value="New" style="display:none; width:100px; font-size:200%">
+                <br><br>
+            </div>
+        </div>
+    </div>
+    
+    <input id="dummy" type="button", style="display:none">
+
+    
+    
+    <!-- ####################### wrap up ####################### -->
+	
+	<div id="end" class="end" style="display:none">
+		<div class="end" style="text-align:left; border:2px solid; padding:10px; font-size:120%; width:800px">
+			<p>Your completion code is 
+                <span id="turkcode" style="font-weight:bold;font-size:130%">0192</span>. 
+                To receive payment for the HIT, return to the Amazon Mechanical Turk page and enter 
+                this code. Please contact us if something goes wrong and we'll fix it as quickly as 
+                possible.
+                <br><br>
+                (Also... if you want to know what this was all about, click 
+                <a href="./wtf/index.html" target="_blank">here</a>
+                after copying your completion code)
+            </p>
+		</div>
+	</div>
+    
+	<!-- ####################### Scripts ####################### -->
+	
+
+	<!-- Script to define the experiment and run it -->
+    <script src="./js/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="./js/experiment.js" type="text/javascript"></script>
+    
+
+</body>
+</html>

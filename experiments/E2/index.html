@@ -1,0 +1,665 @@
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Adelaide Computational Cognitive Science</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="./js/jquery-ui.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+	<!-- ####################### Heading ####################### -->
+	<a name="top"></a>
+	<h1 style="text-align:left" id="header">Adelaide Computational Cognitive Science</h1>
+
+	<!-- ####################### Splash page ####################### -->
+
+	<div class="splash">
+		<!-- Text box for the splash page -->
+		<div class="splash" style="text-align:left; border:2px solid; padding:10px;  width:600px">
+			<p>Thanks for accepting the HIT. <b>"How many species?"</b> is a short psychological study 
+                investigating how people make guesses on the basis of limited information. It involves 
+                the following steps:</p>
+			<ol>
+				<li> We ask for demographic information (not connected to your Amazon ID)<br><br></li> 
+				<li> The study then explains the guessing game. You will need to pass a short test to 
+                     check that you understand how the study works.<br><br></li> 
+				<li> Next comes the experiment itself.<br><br></li>
+				<li> At the end, we'll give you the completion code you need to get paid for the HIT.</li>
+			</ol>
+			<p>
+                Total time taken should be about 15 minutes. Please <u>don't</u> use the "back" button on 
+                your browser or close the window until you reach the end and receive your completion code. 
+                This is very likely to break the experiment and may make it difficult for you to get paid. 
+                However, if something does go wrong, please contact us! When you're ready to begin, click 
+                on the "start" button below.</p></div>
+		<br><br>
+
+		<!-- Next button for the splash page -->
+        <div style="width:600px">
+            <div style="float:right"> 
+                <input type="button" id="splashButton" class="splash" value="Start!" 
+                       onclick="splashButtonClick()">
+            </div>
+        </div>
+	</div>
+
+	<!-- ####################### Demographics ####################### -->
+	
+	<div class="demographics" style="display:none">
+		<div class="demographics" style="text-align:left; border:2px solid; padding:10px;  width:600px">
+			<!-- Explanatory text -->
+			<p>
+                We need this information for our records, but it is kept completely separate from 
+                information about your Amazon ID. As long as you finish the experiment you will get 
+                paid no matter what you put here, so please be honest.
+            </p><br>
+	
+			<!-- Gender -->
+	 		<label for="gender"><b>Gender: &nbsp;</b></label>
+	  		<input type="radio" name="gender" value="male" /> Male &nbsp; 
+	  		<input type="radio" name="gender" value="female" /> Female &nbsp;
+	  		<input type="radio" name="gender" value="other" /> Other<br /><br />
+
+			<!-- Age -->
+	  		<label for="age"><b>Age: &nbsp;</b></label><input id="age" name="age" /><br /><br />
+
+			<!-- Language -->
+	  		<label for="language"><b>Native Language(s): &nbsp;</b></label>
+            <input id="language" name="language" /><br /><br />
+
+			<!-- Country -->
+			<label for="country"><b>Country you live in: &nbsp;</b></label>  
+	  		<select name="country" id="country" class='drop-menu'>
+	    		<option>Afghanistan</option>
+                <option>&Aring;land Islands</option>
+                <option>Albania</option>
+                <option>Algeria</option>
+                <option>American Samoa</option>
+                <option>Andorra</option>
+                <option>Angola</option>
+                <option>Anguilla</option>
+                <option>Antarctica</option>
+                <option>Antigua and Barbuda</option>
+                <option>Argentina</option>
+                <option>Armenia</option>
+                <option>Aruba</option>
+                <option>Australia</option>
+                <option>Austria</option>
+                <option>Azerbaijan</option>
+                <option>Bahamas</option>
+                <option>Bahrain</option>
+                <option>Bangladesh</option>
+                <option>Barbados</option>
+                <option>Belarus</option>
+                <option>Belgium</option>
+                <option>Belize</option>
+                <option>Benin</option>
+                <option>Bermuda</option>
+                <option>Bhutan</option>
+                <option>Bolivia</option>
+                <option>Bosnia and Herzegovina</option>
+                <option>Botswana</option>
+                <option>Bouvet Island</option>
+                <option>Brazil</option>
+                <option>British Indian Ocean territory</option>
+                <option>Brunei Darussalam</option>
+                <option>Bulgaria</option>
+                <option>Burkina Faso</option>
+                <option>Burundi</option>
+                <option>Cambodia</option>
+                <option>Cameroon</option>
+                <option>Canada</option>
+                <option>Cape Verde</option>
+                <option>Cayman Islands</option>
+                <option>Central African Republic</option>
+                <option>Chad</option>
+                <option>Chile</option>
+                <option>China</option>
+                <option>Christmas Island</option>
+                <option>Cocos (Keeling) Islands</option>
+                <option>Colombia</option>
+                <option>Comoros</option>
+                <option>Congo</option>
+                <option>Congo, Democratic Republic</option>
+                <option>Cook Islands</option>
+                <option>Costa Rica</option>
+                <option>C&ocirc;te d'Ivoire (Ivory Coast)</option>
+                <option>Croatia (Hrvatska)</option>
+                <option>Cuba</option>
+                <option>Cyprus</option>
+                <option>Czech Republic</option>
+                <option>Denmark</option>
+                <option>Djibouti</option>
+                <option>Dominica</option>
+                <option>Dominican Republic</option>
+                <option>East Timor</option>
+                <option>Ecuador</option>
+                <option>Egypt</option>
+                <option>El Salvador</option>
+                <option>Equatorial Guinea</option>
+                <option>Eritrea</option>
+                <option>Estonia</option>
+                <option>Ethiopia</option>
+                <option>Falkland Islands</option>
+                <option>Faroe Islands</option>
+                <option>Fiji</option>
+                <option>Finland</option>
+                <option>France</option>
+                <option>French Guiana</option>
+                <option>French Polynesia</option>
+                <option>French Southern Territories</option>
+                <option>Gabon</option>
+                <option>Gambia</option>
+                <option>Georgia</option>
+                <option>Germany</option>
+                <option>Ghana</option>
+                <option>Gibraltar</option>
+                <option>Greece</option>
+                <option>Greenland</option>
+                <option>Grenada</option>
+                <option>Guadeloupe</option>
+                <option>Guam</option>
+                <option>Guatemala</option>
+                <option>Guinea</option>
+                <option>Guinea-Bissau</option>
+                <option>Guyana</option>
+                <option>Haiti</option>
+                <option>Heard and McDonald Islands</option>
+                <option>Honduras</option>
+                <option>Hong Kong</option>
+                <option>Hungary</option>
+                <option>Iceland</option>
+                <option>India</option>
+                <option>Indonesia</option>
+                <option>Iran</option>
+                <option>Iraq</option>
+                <option>Ireland</option>
+                <option>Israel</option>
+                <option>Italy</option>
+                <option>Jamaica</option>
+                <option>Japan</option>
+                <option>Jordan</option>
+                <option>Kazakhstan</option>
+                <option>Kenya</option>
+                <option>Kiribati</option>
+                <option>Korea (north)</option>
+                <option>Korea (south)</option>
+                <option>Kuwait</option>
+                <option>Kyrgyzstan</option>
+                <option>Lao People's Democratic Republic</option>
+                <option>Latvia</option>
+                <option>Lebanon</option>
+                <option>Lesotho</option>
+                <option>Liberia</option>
+                <option>Libyan Arab Jamahiriya</option>
+                <option>Liechtenstein</option>
+                <option>Lithuania</option>
+                <option>Luxembourg</option>
+                <option>Macao</option>
+                <option>Macedonia, Former Yugoslav Republic Of</option>
+                <option>Madagascar</option>
+                <option>Malawi</option>
+                <option>Malaysia</option>
+                <option>Maldives</option>
+                <option>Mali</option>
+                <option>Malta</option>
+                <option>Marshall Islands</option>
+                <option>Martinique</option>
+                <option>Mauritania</option>
+                <option>Mauritius</option>
+                <option>Mayotte</option>
+                <option>Mexico</option>
+                <option>Micronesia</option>
+                <option>Moldova</option>
+                <option>Monaco</option>
+                <option>Mongolia</option>
+                <option>Montenegro</option>
+                <option>Montserrat</option>
+                <option>Morocco</option>
+                <option>Mozambique</option>
+                <option>Myanmar</option>
+                <option>Namibia</option>
+                <option>Nauru</option>
+                <option>Nepal</option>
+                <option>Netherlands</option>
+                <option>Netherlands Antilles</option>
+                <option>New Caledonia</option>
+                <option>New Zealand</option>
+                <option>Nicaragua</option>
+                <option>Niger</option>
+                <option>Nigeria</option>
+                <option>Niue</option>
+                <option>Norfolk Island</option>
+                <option>Northern Mariana Islands</option>
+                <option>Norway</option>
+                <option>Oman</option>
+                <option>Pakistan</option>
+                <option>Palau</option>
+                <option>Palestinian Territories</option>
+                <option>Panama</option>
+                <option>Papua New Guinea</option>
+                <option>Paraguay</option>
+                <option>Peru</option>
+                <option>Philippines</option>
+                <option>Pitcairn</option>
+                <option>Poland</option>
+                <option>Portugal</option>
+                <option>Puerto Rico</option>
+                <option>Qatar</option>
+                <option>R&eacute;union</option>
+                <option>Romania</option>
+                <option>Russian Federation</option>
+                <option>Rwanda</option>
+                <option>Saint Helena</option>
+                <option>Saint Kitts and Nevis</option>
+                <option>Saint Lucia</option>
+                <option>Saint Pierre and Miquelon</option>
+                <option>Saint Vincent and the Grenadines</option>
+                <option>Samoa</option>
+                <option>San Marino</option>
+                <option>Sao Tome and Principe</option>
+                <option>Saudi Arabia</option>
+                <option>Senegal</option>
+                <option>Serbia</option>
+                <option>Seychelles</option>
+                <option>Sierra Leone</option>
+                <option>Singapore</option>
+                <option>Slovakia</option>
+                <option>Slovenia</option>
+                <option>Solomon Islands</option>
+                <option>Somalia</option>
+                <option>South Africa</option>
+                <option>South Georgia and the South Sandwich Islands</option>
+                <option>Spain</option>
+                <option>Sri Lanka</option>
+                <option>Sudan</option>
+                <option>Suriname</option>
+                <option>Svalbard and Jan Mayen Islands</option>
+                <option>Swaziland</option>
+                <option>Sweden</option>
+                <option>Switzerland</option>
+                <option>Syria</option>
+                <option>Taiwan</option>
+                <option>Tajikistan</option>
+                <option>Tanzania</option>
+                <option>Thailand</option>
+                <option>Togo</option>
+                <option>Tokelau</option>
+                <option>Tonga</option>
+                <option>Trinidad and Tobago</option>
+                <option>Tunisia</option>
+                <option>Turkey</option>
+                <option>Turkmenistan</option>
+                <option>Turks and Caicos Islands</option>
+                <option>Tuvalu</option>
+                <option>Uganda</option>
+                <option>Ukraine</option>
+                <option>United Arab Emirates</option>
+                <option>United Kingdom</option>
+                <option selected="selected">United States of America</option>
+                <option>Uruguay</option>
+                <option>Uzbekistan</option>
+                <option>Vanuatu</option>
+                <option>Vatican City</option>
+                <option>Venezuela</option>
+                <option>Vietnam</option>
+                <option>Virgin Islands (British)</option>
+                <option>Virgin Islands (US)</option>
+                <option>Wallis and Futuna Islands</option>
+                <option>Western Sahara</option>
+                <option>Yemen</option>
+                <option>Zaire</option>
+                <option>Zambia</option>
+                <option>Zimbabwe</option>
+	    	</select>
+		
+			<br>
+		</div>
+		<br>
+		
+		<!-- Demographics  button -->
+        <div style="width:600px">
+            <div style="float:right"> 
+                <input type="button" class="demographics" id="demographicsButton" value="Next >"
+                       onclick="demographicsButtonClick()">
+            </div>
+        </div>
+	</div>	
+
+
+
+	<!-- ####################### Instructions ####################### -->
+
+	<!-- One div to cover the whole instruction set -->
+	<div class="instruction" style="display:none">
+	
+		<!-- Instruction 0 (initially hidden only by the big-div)-->
+		<div class="instruction0">
+		<div id="instruction0inner" class="innerbox" 
+             style="text-align:left; border:2px solid; padding:10px;  width:600px">
+			<p>This is an study looking at how people make guesses on the basis of 
+            limited information, and we'd like you to think about the following situation: 
+            <br><br>
+            Scientists interested in studying insect biology stake out square meter 
+            blocks, and record the number of insects of different kinds that they see.
+            In this task you'll be shown the results of 32 different "insect trap"
+            experiments, taken from different parts of the world. No two sites are
+            alike, and <u>different species</u> are found at each location. 
+            <br><br>    
+            For all 32 sites, you'll be shown a list of the insects that have been observed
+            so far. Your task is to judge the probability that the next insect to be
+            observed at that location will belong to a new species, or one of the
+            previous ones.
+            </p>    
+		</div><br></div>
+		
+        <!-- Instruction 1 (initially hidden by the big div and also itself hidden)-->
+		<div class="instruction1" style="display:none"> <a name="instruct1"></a>
+		<div id="instruction1inner" class="innerbox" 
+             style="text-align:left; border:2px solid; padding:10px;  width:600px">
+            To give you a feel for what the task is like, here's an example of what
+            you might be asked to do. You might be told about new data from a site on
+            the island of Wug. Scientists there have just begun collecting data. Here's
+            a summary what they've observed so far:
+            </p>
+            <p style="text-align:left; font-family:'Courier New', monospace;"><b>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GX12<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GX12<br>
+            NS81 GX12 BL56<br>            
+            </b></p>
+            <p>What this display shows is that the scientist have captured 5 insects. Three of them 
+                belong to the species designated
+                <span style="text-align:left; font-family:'Courier New', monospace;">GX12</span>, 
+            one of them belongs to the species 
+                <span style="text-align:left; font-family:'Courier New', monospace;">NS81</span>, 
+            and the last one belongs to the species 
+                <span style="text-align:left; font-family:'Courier New', monospace;">BL56</span>.
+            The species names aren't particularly meaningful: the scientists on this 
+            survey use arbitrary codes to refer to each one. 
+        </div><br></div>
+    
+        <!-- Instruction 2 (initially hidden by the big div and also itself hidden)-->
+		<div class="instruction2" style="display:none"> <a name="instruct2"></a>
+		<div id="instruction2inner" class="innerbox" 
+             style="text-align:left; border:2px solid; padding:10px;  width:600px">
+           What we want you do to is think about the data that the scientists have observed
+           and make a guess about what the <b>next</b> observation will be. Specifically, we
+           want your intuition about whether the next insect will belong to one of the species
+           that have already been observed (i.e., 
+                <span style="text-align:left; font-family:'Courier New', monospace;">GX12</span>, 
+                <span style="text-align:left; font-family:'Courier New', monospace;">NS81</span>, 
+           or
+                <span style="text-align:left; font-family:'Courier New', monospace;">BL56</span>)
+           or whether you think the next insect captured will be a different species altogether.
+        </div><br></div>
+		
+        <!-- Instruction 3 (initially hidden by the big div and also itself hidden)-->
+		<div class="instruction3" style="display:none"> <a name="instruct3"></a>
+		<div id="instruction3inner" class="innerbox" 
+             style="text-align:left; border:2px solid; padding:10px;  width:600px">
+            For every island we'll ask you to answer the following question:
+            <br>
+            <br>
+            <div>
+            <div style="float:left; width:30px"> &nbsp; </div>
+            <div style="float:left; width:570px">
+  
+                <p> 
+                    When the next insect is captured, do you think that it will belong to a
+                    new species?
+                </p><br>
+                <div>
+                    <div style="width:135px;display:inline-block;text-align:right;float:left">
+                        Definitely not new &nbsp;&nbsp;
+                    </div> 
+                    <div id="slider2" style="width:290px;float:left"></div>
+                    <div style="width:135px;display:inline-block;text-align:left;float:left">
+                        &nbsp;&nbsp; Definitely new
+                    </div> 
+                </div>
+                <br><br>
+                <p>
+                    <label for="sliderval2">Your answer:</label>
+                    <input type="text" id="sliderval2" readonly style="border:0; font-weight:bold; 
+                                                              width:50px; text-align:right">
+                    % chance that it will be new.
+                </p>
+    
+            </div>    
+                <br style="clear:left" />
+            </div>
+            <div style="">
+                <br>
+                If you think that the next insect will belong to a <b>new species</b>, move the slider to 
+                the <u>right</u>. If you think that it will br one of the <b>already-observed species</b> 
+                (i.e., <span style="text-align:left; font-family:'Courier New', monospace;">GX12</span>, 
+                <span style="text-align:left; font-family:'Courier New', monospace;">NS81</span>, or
+                <span style="text-align:left; font-family:'Courier New', monospace;">BL56</span>), move it
+                to the <u>left</u>. The text box below will show you exactly what response will be recorded. 
+                Try moving the slider to see what this looks like. You can move the slider back and forth 
+                until you're happy with the answer.
+            </div>
+        </div><br></div>
+    
+         <!-- Instruction 4 (initially hidden by the big div and also itself hidden)-->
+		<div class="instruction4" style="display:none"> <a name="instruct1"></a>
+		<div id="instruction4inner" class="innerbox" 
+             style="text-align:left; border:2px solid; padding:10px;  width:600px">
+            Pretty  straightforward, right? So, as soon as you're ready, you can click on the button 
+            below. Before the study starts, you'll be asked a few questions just to check that you've 
+            understood these instructions.
+        </div><br></div>
+    
+    
+		
+		<!-- Instruction button (initially hidden only by the big div) -->
+        <div style="width:600px">
+            <div style="float:right"> 
+		          <div class="instruction">
+                      <input type="button" id="instructionButton" value="Read More >" 
+                             onclick="instructionButtonClick()">
+                      <br><br>
+                  </div>
+            </div>    
+		</div>
+	</div>
+	
+	
+	
+	<!-- ####################### Instruction Checks ####################### -->
+
+	<div class="check" style="display:none">
+		<div style="text-align:left; border:2px solid; padding:10px;  width:600px">
+			
+			<!-- Question 0 -->
+	  		<label for="question0">What are you asked to guess?</label><br>
+	  		<input type="radio" name="question0" class="checkRadio" value="incorrect" />
+                How many insects will be captured next time<br />
+	  		<input type="radio" name="question0" class="checkRadio" value="correct" />
+                Whether the next insect will belong to a new species<br />
+	  		<input type="radio" name="question0" class="checkRadio" value="incorrect" />
+                The number of insect species on the island<br /><br />
+	
+			<!-- Question 1 -->
+			<label for="question1">Is there any relationship between insect species 
+                on the different islands?</label><br>
+	  		<input type="radio" name="question1" class="checkRadio" value="correct" />
+                No, all the islands are unrelated and have totally different insect species<br />
+	  		<input type="radio" name="question1" class="checkRadio" value="incorrect" />
+                Yes, they're all similar and have some of the same species<br />
+			<br>
+	
+	  		<!-- Question 2 -->
+			<label for="question2">How many questions do you have to answer?</label><br>
+	  		<input type="radio" name="question2" class="checkRadio" value="incorrect" />29<br />
+	  		<input type="radio" name="question2" class="checkRadio" value="correct" />32<br />
+	  		<input type="radio" name="question2" class="checkRadio" value="incorrect" />36<br />
+		
+		</div>
+		<br><br>
+	
+		<!-- Submit instruction check answers button -->
+        <div style="width:600px">
+            <div style="float:right">
+                <input type="button" id="checkButton" value="Submit Answers" 
+                       onclick="checkButtonClick()">
+            </div>
+        </div>
+	</div>
+	
+	<!-- ####################### Response to Instruction Check ####################### -->
+	
+	<div class="checkSuccess" style="display:none">
+		<div class="checkSuccess" style="text-align:left; border:2px solid; padding:10px;  width:600px">
+			<p>Well done! Click on the button below when you're ready to start the experiment</p>
+		</div>
+		<br><br>
+
+		<!-- Next button for the splash page -->	
+        <div style="width:600px">
+            <div style="float:right">
+		          <input type="button" id="checkSuccessButton" class="checkSuccess" 
+                         value="Start Experiment!" onclick="checkSuccessButtonClick()">
+            </div>
+        </div>
+	</div>	
+	
+	<div class="checkFail" style="display:none">
+		<div class="checkFail" style="text-align:left; border:2px solid; padding:10px;  width:600px">
+			<p>Sorry, at least one of your answers was incorrect. Please take another look at the 
+                instructions and try again.</p>
+		</div>
+		<br><br>
+
+		<!-- Next button for the splash page -->	
+        <div style="width:600px">
+            <div style="float:right">
+		          <input type="button" id="checkFailButton" class="checkFail" 
+                         value="< Back to the Instructions" onclick="checkFailButtonClick()">
+            </div>
+        </div>
+	</div>
+	
+	
+	<!-- ####################### Core experiment ####################### -->
+
+	<!-- display the sample -->
+	<div class="expt">	
+    
+	<div class="expt" style="display:none; text-align:left; border:2px solid; padding:10px; width:600px" >
+        <p style="text-align:left">Data from the island of <span id="islandname">ISLAND</span>
+        have begun to arrive. Scientists report that they have captured the following insects within the 
+        plot laid out at the site:</p>
+        <p id="stimulus" style="text-align:left; font-family:'Courier New', monospace;"></p>
+        <p>Take a moment to think about the data, and then click "Next" to enter your guess</p>
+     </div>
+    </div>
+    
+    <!-- moveon button -->
+	<div class="expt2" style="display:none">
+		<br><br>
+        <div style="width:600px">
+            <div style="float:right">
+                <input type="button" class="expt2" onclick="showResponseButtons()" 
+                       value="Next >">
+            </div>
+        </div>
+	</div>
+    <br>
+        
+    <!-- response options -->
+    <div class="response" style="display:none; text-align:left; border:2px solid; padding:10px; width:600px" >
+        <br>        
+        
+        <!-- Slider -->
+        <p> 
+            When the next insect is captured, do you think that it will belong to a
+            new species?
+        </p><br>
+        <div>
+            <div style="width:135px;display:inline-block;text-align:right;float:left">
+                Definitely not new &nbsp;&nbsp;</div> 
+            <div id="slider" style="width:320px;float:left"></div>
+            <div style="width:135px;display:inline-block;text-align:left;float:left">
+                &nbsp;&nbsp; Definitely new</div> 
+        </div>
+        <br><br>
+        <p>
+            <label for="sliderval">Your answer:</label>
+            <input type="text" id="sliderval" readonly style="border:0; font-weight:bold; 
+                                                              width:30px; text-align:right">
+            % chance that it will be different from the observed ones.
+        </p>
+
+    </div>
+	
+	
+	<!-- end trial button -->
+	<div id="buttons" class="endtrial" style="display:none">
+		<br><br>
+        <div style="width:600px">
+            <div style="float:right">
+                <input type="button" class="endtrial" id="nextTrialButton" 
+                       onclick="nextTrial()" value="Next >">
+            </div>
+        </div>
+	</div>
+    
+    </div>
+
+	
+	<!-- ####################### Wrap up! ####################### -->
+
+	<div class="checkduplicate" style="display:none">
+		<div class="checkduplicate" style="text-align:left; border:2px solid; padding:10px;  width:600px">
+			<p>Thanks for participating in the experiment! 
+				<br><br>
+                One final question: we ran a very similar study to this one earlier this week, and we'd
+                like to know if you did that HIT as well as this one. It's perfectly okay to do both 
+                (you'll get paid either way!) but we do need to know for our records:<br><br>
+                
+	 		<label for="duplicate"></label>
+	  		<input type="radio" name="duplicate" value="yes" /> Yes, I did the earlier HIT &nbsp; <br>
+	  		<input type="radio" name="duplicate" value="no" /> No, I have not done the other HIT &nbsp;<br>
+	  		<input type="radio" name="duplicate" value="don't know" /> I'm not sure<br /><br />
+		</div>
+	</div>
+	<!-- end trial button -->
+	<div id="buttons" class="checkduplicate" style="display:none">
+		<br><br>
+        <div style="width:600px">
+            <div style="float:right">
+                <input type="button" class="checkduplicate" id="moveToEndButton" 
+                       onclick="finishIt()" value="Get completion code!">
+            </div>
+        </div>
+	</div>
+    
+
+
+	<div class="wrapup" style="display:none">
+		<div class="wrapup" style="text-align:left; border:2px solid; padding:10px;  width:600px">
+			<p>Your completion code is 
+                <span id="turkcode" style="font-weight:bold;font-size:125%">0192</span>. 
+                To receive payment for the HIT, return to the Amazon Mechanical Turk page and enter 
+                this code. Please contact us if something goes wrong and we'll fix it as quickly as 
+                possible.</p>
+		</div>
+	</div>
+
+
+	<!-- ####################### Scripts ####################### -->
+	
+	<!-- jQuery & jQuery UI-->
+	<script src="./js/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="./js/jquery-ui.js"></script> 
+
+	<!-- Script to define the experiment and run it -->
+	<script src="./js/experiment.js" type="text/javascript"></script>
+
+</body>
+</html>

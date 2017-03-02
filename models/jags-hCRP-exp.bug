@@ -1,0 +1,21 @@
+model {
+  # This is the JAGS specification for the hierarchical CRP model
+  # with exponential prior. The code is set up to call it from within R, 
+  # so the data specification is in the R code.
+
+  # theta from exponential distribution
+  u ~ dbeta(1,1)
+  theta <- -scale*log(u)
+
+  # number of types and tokens
+  N <- sum(n)
+  K <- length(n)
+
+  # probability of the count vector under a CRP (i.e. alpha fixed at 1)
+  LP <- loggam(theta) - loggam(theta+N) + K*log(theta) + sum( loggam(n) )
+  P <- exp(LP)
+
+  # dummy so that the sampler actually works
+  out ~ dbern(P)
+
+}

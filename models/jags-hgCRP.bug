@@ -1,0 +1,24 @@
+model {
+  # This is the JAGS specification for the hierarchical generalised
+  # CRP model. The code is set up to call it from within R, so the 
+  # data specification is in the R code. 
+
+  # theta from generalised pareto
+  u ~ dbeta(1,1)
+  theta <- scale * (u^-shape -1)/shape
+
+  # alpha from a uniform distribution
+  alpha ~ dbeta(count*(1-loc),count*loc)
+
+  # number of types and tokens
+  N <- sum(n)
+  K <- length(n)
+
+  # probability of the count vector under a generalized CRP
+  LP <- loggam(theta) - loggam(theta+N) + K*log(alpha) + loggam(theta/alpha + K) - loggam(theta/alpha) + sum( loggam(n-alpha) - loggam(1-alpha))
+  P <- exp(LP)
+
+  # dummy so that the sampler actually works
+  out ~ dbern(P)
+
+}
